@@ -4,7 +4,9 @@ name: Shell Commands #name of the entire workflow
 on: [push]
 
 #Jobs are defined using the job key
+
 jobs:
+  # Job number 1
   run-shell-command:
     runs-on: ubuntu-latest #specifies the OS on the VM(virtual machine)
     steps:
@@ -22,3 +24,14 @@ jobs:
           import platform
           print(platform.processor())
         shell: python #specifies the type of command
+
+  # Job number2
+  run-windows-commands:
+    runs-on: windows-latest
+    steps:
+      - name: Directory Powershell
+        run: Get-Location
+        # this job will run on bash command
+      - name: Directory Bash
+        run: pwd
+        shell: bash
