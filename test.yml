@@ -1,0 +1,16 @@
+name: Aretas
+age: 36
+address: "Germany"
+active: true
+key:
+  key: value
+  key2: 33
+array:
+  - item1
+  - item2
+objectsArrays:
+  - key: value
+    key2: value
+  - keya: value
+    keyb: value
+multiple lines: |

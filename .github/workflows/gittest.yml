@@ -1,0 +1,16 @@
+name: Shell Commands #name of the entire workflow
+
+#Events that will trigger the workflow
+on: [push]
+
+#Jobs are defined using the job key
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest #specifies the OS on the VM(virtual machine)
+    steps:
+      - name: echo a string #Bash command for Ubuntu and Linux Shell commands for Windows?
+        run: echo "Hello World"
+      - name: multiple script
+        run: |
+          node -v
+          npm -v
