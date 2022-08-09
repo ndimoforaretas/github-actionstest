@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest #specifies the OS on the VM(virtual machine)
     steps:
       - name: echo a string #Bash command for Ubuntu and Linux Shell commands for Windows?
-        run: echo "Hello World"
-      - name: multiple script
+        run: eccho "Hello World"
+      - name: multiline script
         run: |
           node -v
           npm -v
