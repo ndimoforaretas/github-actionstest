@@ -8,9 +8,18 @@ jobs:
   run-shell-command:
     runs-on: ubuntu-latest #specifies the OS on the VM(virtual machine)
     steps:
-      - name: echo a string #Bash command for Ubuntu and Linux Shell commands for Windows?
-        run: eccho "Hello World"
+      # action 1
+      - name: echo a string #bash command for Ubuntu and Linux, powershell commands for Windows
+        run: echo "Hello World"
+        # action 2
       - name: multiline script
         run: |
           node -v
           npm -v
+      # action 3
+      - name: python Command
+        run: |
+          import platform
+          print
+          (platform.processor())
+        shell: python #specifies the type of command
