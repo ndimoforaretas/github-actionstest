@@ -28,6 +28,7 @@ jobs:
   # Job number2
   run-windows-commands:
     runs-on: windows-latest
+    needs: ["run-shell-command"] #makes job number 2 to start only after job number 1
     steps:
       - name: Directory Powershell
         run: Get-Location
