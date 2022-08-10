@@ -12,6 +12,6 @@ jobs:
         uses: actions/hello-world-javascript-action@v1
         # to provide inputs, we use with
         with:
-          who-to-greet: World
+          who-to-greet: "World"
       - name: Log Greeting Time
         run: echo "${{ steps.greet.outputs.time}}" #used to reference the output of the command with an id
