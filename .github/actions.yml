@@ -9,9 +9,9 @@ jobs:
       - name: Simple JS Action
         id: greet
         #below, we can specify a custion Javascript command using "uses" instead of "run"
-        uses: actions/hello-world-javascript-action@v1.1
+        uses: actions/hello-world-javascript-action@v1
         # to provide inputs, we use with
         with:
-          who-to-greet: The Severless World!
+          who-to-greet: World
       - name: Log Greeting Time
-        run: echo "${{ steps.outputs.time}}" #used to reference the output of the command with an id
+        run: echo "${{ steps.greet.outputs.time}}" #used to reference the output of the command with an id
